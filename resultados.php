@@ -9,6 +9,7 @@
 	<meta charset="utf-8">
 	<link rel="shortcut icon" href="imagenes/icono.png">
 	<link rel="stylesheet" type="text/css" href="css/estilos2.css">
+	<script src="js/script.js"></script>
 </head>
 <body>
 	<div class="container">
@@ -22,11 +23,11 @@
 					}
 					?>
 				</select>
-				<input clas="enviar" type="submit" name="Enviar"/><br/>
+				<input type="submit" name="Enviar"/><br/>
 			</form>
 			<form action="personal.php" method="post">
-				<input type="text" name="codigo" placeholder="código">
-				<input clas="enviar" type="submit" name="Enviar"/>
+				<input id="codigo" type="number" name="codigo" placeholder="código de postulante">
+				<input type="submit" value="Enviar" onclick="validarNumero(document.getElementById('codigo'),'Codigo inválido')"/>
 			</form>
 		</div>
 	</div>
